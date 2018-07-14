@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">小装小修(师傅端)</string>
+
+    <!--首页-->
+    <string name="today_income">今日收入</string>
+
+    <string name="today_order">今日接单</string>
+
+    <string name="sum_order">累计接单</string>
+
 </resources>
