@@ -8,4 +8,28 @@
 
     <string name="sum_order">累计接单</string>
 
+    <string name="suspend_receipt">暂停接单</string>
+
+    <string name="whether_suspend_receipt">是否暂停接单</string>
+
+    <string name="suspend_receipt_tip">暂停接单系统将无法给您推送订单</string>
+
+    <string name="no_consider">暂不考虑</string>
+
+    <string name="suspend_sure">确定暂停</string>
+
+    <!--个人中心-->
+    <string name="personal_center">个人中心</string>
+
+    <string name="sum_score">综合评分</string>
+
+    <string name="performance_score">表现得分</string>
+
+    <string name="my_orders">我的订单</string>
+
+    <string name="my_wallet">我的钱包</string>
+
+    <string name="setting">设置</string>
+
+
 </resources>

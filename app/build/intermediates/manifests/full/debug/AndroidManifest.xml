@@ -17,12 +17,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+
+        <!-- 师傅端首页 -->
         <activity android:name="com.xzxx.decorate.o2o.master.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <!-- 个人中心 -->
+        <activity android:name="com.xzxx.decorate.o2o.master.PersonalActivity" >
         </activity>
     </application>
 
