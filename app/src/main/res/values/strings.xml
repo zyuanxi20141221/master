@@ -19,6 +19,20 @@
     <string name="suspend_sure">确定暂停</string>
 
     <!--个人中心-->
+    <string name="personal_info">个人资料</string>
+
+    <string name="edit">编辑</string>
+
+    <string name="sex">性别</string>
+
+    <string name="birthday">生日</string>
+
+    <string name="phone_number">电话</string>
+
+    <string name="job">职业</string>
+
+    <string name="skill_in_skill">擅长技能</string>
+
     <string name="personal_center">个人中心</string>
 
     <string name="sum_score">综合评分</string>
@@ -31,5 +45,34 @@
 
     <string name="setting">设置</string>
 
+    <string name="owner_order">我的订单</string>
+    
+    <string name="send_to_headquarters">发给总部</string>
+
+    <string name="service_completion">服务完成</string>
+
+    <string name="delete_order">删除订单</string>
+
+    <string name="order_detail">订单详情</string>
+
+    <string name="look_more">阅读详细</string>
+
+    <string name="service_cost">服务费</string>
+
+    <string name="modify_cost">修改金额</string>
+
+    <string name="order_number">订单编号</string>
+
+    <string name="order_date">订单时间</string>
+
+    <string name="payment_state">支付状态</string>
+
+    <string name="payment_method">支付方式</string>
+
+    <string name="all_order">全部订单</string>
+
+    <string name="to_be_receipt">待收款</string>
+
+    <string name="after_sale_service">售后服务</string>
 
 </resources>

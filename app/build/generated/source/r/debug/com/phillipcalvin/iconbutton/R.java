@@ -13,8 +13,8 @@ public final class R {
     }
     public static final class id {
         public static final int all = 0x7f08001c;
-        public static final int text_only = 0x7f0800b6;
-        public static final int without_drawable = 0x7f0800cb;
+        public static final int text_only = 0x7f0800b7;
+        public static final int without_drawable = 0x7f0800cc;
     }
     public static final class styleable {
         public static final int[] IconButton = { 0x7f03004e, 0x7f0300af };

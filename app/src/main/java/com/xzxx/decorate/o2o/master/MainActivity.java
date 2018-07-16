@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 window.setWindowAnimations(R.style.AlertDialog_AppCompat);
                 break;
             case R.id.image_personal_center:
-                Intent personalIntent = new Intent(this,PersonalActivity.class);
+                Intent personalIntent = new Intent(this,PersonalCenterActivity.class);
                 startActivity(personalIntent);
                 break;
         }

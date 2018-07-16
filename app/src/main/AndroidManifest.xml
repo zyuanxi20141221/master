@@ -20,9 +20,17 @@
         </activity>
 
         <!--个人中心-->
-        <activity android:name=".PersonalActivity">
-
+        <activity android:name=".PersonalCenterActivity">
         </activity>
+
+        <!--个人资料-->
+        <activity android:name=".PersonalInfoActivity">
+        </activity>
+
+        <!--订单详情-->
+        <activity android:name=".OrderDetailActivity">
+        </activity>
+
     </application>
 
 </manifest>
