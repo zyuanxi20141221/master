@@ -2,15 +2,11 @@ package com.xzxx.decorate.o2o.master;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 /**
  * Created by zf on 2018/7/16.
@@ -25,7 +21,6 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_order_detail);
         order_back_button = findViewById(R.id.order_back_button);
-
         order_back_button.setOnClickListener(this);
     }
 

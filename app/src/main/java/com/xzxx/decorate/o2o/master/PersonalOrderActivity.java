@@ -8,9 +8,17 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import com.xzxx.decorate.o2o.fragment.BaseFragment;
 import com.xzxx.decorate.o2o.fragment.FragmentFactory;
+import com.xzxx.decorate.o2o.utils.BasicUtils;
+import java.lang.reflect.Field;
 
+/**
+ * 我的订单页面
+ */
 public class PersonalOrderActivity extends AppCompatActivity {
 
     private TabLayout mTabLayout = null;
@@ -23,6 +31,48 @@ public class PersonalOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personal_order);
 
+        mTabLayout = findViewById(R.id.tab_layout);
+        mViewPager = findViewById(R.id.tab_viewpager);
+        reflex(mTabLayout);
+        pageAdatper = new PageAdatper(getSupportFragmentManager());
+        mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setAdapter(pageAdatper);
+        mTabLayout.setupWithViewPager(mViewPager);
+    }
+
+    public void reflex(final TabLayout tabLayout) {
+        tabLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    LinearLayout mTabStrip = (LinearLayout) tabLayout.getChildAt(0);
+                    int dp = BasicUtils.dip2px(tabLayout.getContext(), 25);
+                    for (int i = 0; i < mTabStrip.getChildCount(); i++) {
+                        View tabView = mTabStrip.getChildAt(i);
+                        Field mTextViewField = tabView.getClass().getDeclaredField("mTextView");
+                        mTextViewField.setAccessible(true);
+                        TextView mTextView = (TextView) mTextViewField.get(tabView);
+                        tabView.setPadding(0, 0, 0, 0);
+                        int width = 0;
+                        width = mTextView.getWidth();
+                        if (width == 0) {
+                            mTextView.measure(0, 0);
+                            width = mTextView.getMeasuredWidth();
+                        }
+                        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) tabView.getLayoutParams();
+                        params.width = width;
+                        params.leftMargin = dp;
+                        params.rightMargin = dp;
+                        tabView.setLayoutParams(params);
+                        tabView.invalidate();
+                    }
+                } catch (NoSuchFieldException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override

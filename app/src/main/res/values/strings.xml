@@ -75,4 +75,30 @@
 
     <string name="after_sale_service">售后服务</string>
 
+    <string name="in_service">服务中</string>
+
+    <string name="completed">已完成</string>
+
+    <string name="my_balance">我的余额</string>
+
+    <string name="put_forward">提现</string>
+
+    <string name="my_band_card">我的银行卡</string>
+
+    <string name="my_bill">我的账单</string>
+
+    <string name="balance">余额提现</string>
+
+    <string name="balance_record">提现记录</string>
+
+    <string name="to_band_card">到账银行卡</string>
+
+    <string name="amount_balance">提现金额</string>
+
+    <string name="sum_amount_balance">全部可提现余额</string>
+
+    <string name="all_balance">全部提现</string>
+
+    <string name="select_to_band_card">选择到账银行卡</string>
+
 </resources>

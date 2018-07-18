@@ -12,11 +12,6 @@
 
         <!--师傅端首页-->
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!--个人中心-->
@@ -27,8 +22,35 @@
         <activity android:name=".PersonalInfoActivity">
         </activity>
 
+        <activity android:name=".PersonalOrderActivity">
+
+
+        </activity>
+
         <!--订单详情-->
         <activity android:name=".OrderDetailActivity">
+
+        </activity>
+
+        <!--我的钱包-->
+        <activity android:name=".MyWalletActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!--余额提现-->
+        <activity android:name=".BalanceActivity">
+
+        </activity>
+
+        <!--提现记录-->
+        <activity android:name=".BalanceRecordActivity">
+
         </activity>
 
     </application>

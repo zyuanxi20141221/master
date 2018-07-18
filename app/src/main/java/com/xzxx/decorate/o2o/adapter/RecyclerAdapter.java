@@ -20,7 +20,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
 
+        }
     }
 
     public interface OnItemClickListener {
@@ -52,7 +54,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View view = inflater.inflate(R.layout.item_listview_allorder, parent, false);
-
         return new RecyclerAdapter.ViewHolder(view);
     }
 
@@ -67,13 +68,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 //                        .into(holder.master_photo_image);
                 holder.master_title_text.setText(order.getMaster_title());
                 if (order.getOrder_state() == 0) { //待服务
-
                 } else if (order.getOrder_state() == 1) { //服务中
-
-                } else if (order.getOrder_state() == 2) { //待支付
-
+                    holder.order_state_text.setText(R.string.in_service);
+                } else if (order.getOrder_state() == 2) { //待收款
+                    holder.order_state_text.setText(R.string.to_be_receipt);
                 } else if (order.getOrder_state() == 3) { //已完成 未评价
-
+                    holder.order_state_text.setText(R.string.completed);
+                    holder.ll_all_order_in_service.setVisibility(View.GONE);
+                    holder.ll_all_order_delete.setVisibility(View.VISIBLE);
                 } else if (order.getOrder_state() == 4) {  //已完成 已评价
 
                 } else if(order.getOrder_state() == 5) {  //售后服务已申请
@@ -112,6 +114,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         private TextView master_name_text;
         private ImageView master_photo_image;
         private TextView master_title_text;
+        private TextView order_state_text;
         private TextView order_name_text;
         private TextView order_date_text;
         private TextView order_address_text;
@@ -128,6 +131,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             master_name_text = itemView.findViewById(R.id.id_master_name);
             master_photo_image = itemView.findViewById(R.id.id_master_photo);
             master_title_text = itemView.findViewById(R.id.id_master_title);
+            order_state_text = itemView.findViewById(R.id.order_state);
             order_name_text = itemView.findViewById(R.id.order_name);
             order_date_text = itemView.findViewById(R.id.order_date);
             order_address_text = itemView.findViewById(R.id.order_address);
